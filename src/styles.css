@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 /* Navbar styling */
 .navbar {
     background-color: #333;
@@ -13,36 +14,42 @@ body {
     width: 100%;
     z-index: 1000;
 }
+
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content:end;
+    justify-content: end;
 }
+
 .navbar ul li {
     display: inline;
 }
+
 .navbar ul li a {
     color: white;
     text-decoration: none;
     padding: 14px 20px;
     display: block;
 }
+
 .navbar ul li a:hover {
     background-color: #575757;
     border-radius: 5px;
 }
+
 /* Main content styling */
 .content {
     margin-top: 60px; /* Space for the fixed navbar */
     padding: 20px;
 }
+
 h1 {
     color: #333;
     text-align: center;
 }
-/* Center title styling */
+
 /* Center title styling */
 .navbar .title {
     position: absolute;
@@ -81,44 +88,63 @@ h1 {
     flex-grow: 1;
     justify-content: flex-end;
 }
-/* Banner Image Styling */
-.banner-image {
-    text-align: center;
-    position: fixed; /* Keeps the image fixed */
-    top: 60px; /* Adjust based on navbar height */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    width: 100%; /* Ensure it takes full width */
-    max-width: 100%; /* For responsiveness */
-    height: auto;
+
+/* Planner form styling */
+.planner-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Make the form responsive and fields side by side */
+    gap: 20px; /* Space between form fields */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.banner-image img {
-    max-width: 100%; /* Scale the image to 80% of the container width */
-    height: auto;
-    border-radius: 10px; /* Rounds the corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
+/* Individual form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.get-started-btn {
-    position: absolute;
-    top: 50%; /* Centers the button vertically on the image */
-    left: 27%; /* Move the button to the left */
-    transform: translateY(-50%); /* Centers the button vertically */
-    background-color: #ed2e2e; /* Button background color */
-    color: white;
-    border: none;
-    padding: 15px 30px;
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group select,
+.form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.form-group select[multiple] {
+    height: 100px; /* Adjust height for multiple select fields */
+}
+
+.form-group button.generate-btn {
+    padding: 12px 20px;
     font-size: 18px;
+    color: #fff;
+    background-color: #ed2e2e;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    align-self: flex-start;
 }
 
-.get-started-btn:hover {
-    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Apply a gradient on hover */
+.form-group button.generate-btn:hover {
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Apply gradient on hover */
 }
 
-
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .planner-form {
+        grid-template-columns: 1fr; /* Stack fields on smaller screens */
+    }
+}
