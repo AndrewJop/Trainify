@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="savedWorkouts.html">Saved Workouts</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+            <li><a href="calendar.html">Workout Calendar</a></li>
+        </ul>
+        <div class="title">
+            Tr<span class="ai-highlight">AI</span>nify
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Planner Section -->
+        <section id="planner">
+            <h1>AI Workout Planner</h1>
+
+            <form class="planner-form">
+                <!-- Days per Week -->
+                <div class="form-group">
+                    <label for="days-per-week">How many days per week do you want to work out?</label>
+                    <select id="days-per-week" name="days-per-week">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+
+                <!-- Exercises per Day -->
+                <div class="form-group">
+                    <label for="exercises-per-day">How many exercises per day?</label>
+                    <input type="number" id="exercises-per-day" name="exercises-per-day" min="1" max="10">
+                </div>
+
+                <!-- Muscle Groups -->
+                <div class="form-group">
+                    <label for="muscle-groups">Select the muscle groups you want to work on:</label>
+                    <select id="muscle-groups" name="muscle-groups" multiple>
+                        <option value="arms">Arms</option>
+                        <option value="legs">Legs</option>
+                        <option value="chest">Chest</option>
+                        <option value="back">Back</option>
+                        <option value="shoulders">Shoulders</option>
+                        <option value="core">Core</option>
+                    </select>
+                </div>
+
+                <!-- Type of Training -->
+                <div class="form-group">
+                    <label for="training-type">What type of training are you looking for?</label>
+                    <select id="training-type" name="training-type">
+                        <option value="strength">Strength Training</option>
+                        <option value="muscle">Gain Muscle</option>
+                        <option value="weight-loss">Lose Weight</option>
+                        <option value="endurance">Endurance Training</option>
+                    </select>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="form-group">
+                    <button type="button" class="generate-btn">Generate Plan</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
