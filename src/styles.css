@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:end;
+}
+.navbar ul li {
+    display: inline;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+/* Main content styling */
+.content {
+    margin-top: 60px; /* Space for the fixed navbar */
+    padding: 20px;
+}
+h1 {
+    color: #333;
+    text-align: center;
+}
+/* Center title styling */
+/* Center title styling */
+.navbar .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b); /* Fancy gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling the "AI" part of TrAInify */
+.ai-highlight {
+    color: #ffde59;
+    font-size: 34px;
+    font-family: 'Courier New', Courier, monospace; /* Different font */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient for AI */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Adjust navbar to make space for the centered title */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+/* Banner Image Styling */
+.banner-image {
+    text-align: center;
+    position: fixed; /* Keeps the image fixed */
+    top: 60px; /* Adjust based on navbar height */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 100%; /* For responsiveness */
+    height: auto;
+}
+
+.banner-image img {
+    max-width: 100%; /* Scale the image to 80% of the container width */
+    height: auto;
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
+}
+
+.get-started-btn {
+    position: absolute;
+    top: 50%; /* Centers the button vertically on the image */
+    left: 27%; /* Move the button to the left */
+    transform: translateY(-50%); /* Centers the button vertically */
+    background-color: #ed2e2e; /* Button background color */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Apply a gradient on hover */
+}
+
+
