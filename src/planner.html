@@ -9,17 +9,19 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="planner.html">Planner</a></li>
-            <li><a href="savedWorkouts.html">Saved Workouts</a></li>
-            <li><a href="nutrition.html">Nutrition</a></li>
-            <li><a href="calendar.html">Workout Calendar</a></li>
-        </ul>
-        <div class="title">
-            Tr<span class="ai-highlight">AI</span>nify
-        </div>
-    </nav>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li> <!-- Home link -->
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="savedWorkouts.html">Saved Workouts</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="calendar.html">Workout Calendar</a></li>
+    </ul>
+    <div class="title">
+        Tr<span class="ai-highlight">AI</span>nify
+    </div>
+</nav>
+
 
     <!-- Main Content -->
     <div class="content">
@@ -29,6 +31,24 @@
             <h1>AI Workout Planner</h1>
 
             <form class="planner-form">
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="120" required>
+                </div>
+
+                <!-- Height -->
+                <div class="form-group">
+                    <label for="height">Height (in):</label>
+                    <input type="number" id="height" name="height" min="50" max="300" required>
+                </div>
+
+                <!-- Weight -->
+                <div class="form-group">
+                    <label for="weight">Weight (lbs):</label>
+                    <input type="number" id="weight" name="weight" min="20" max="500" required>
+                </div>
+
                 <!-- Days per Week -->
                 <div class="form-group">
                     <label for="days-per-week">How many days per week do you want to work out?</label>
@@ -43,24 +63,26 @@
                     </select>
                 </div>
 
-                <!-- Exercises per Day -->
+                <!-- Hours per Day -->
                 <div class="form-group">
-                    <label for="exercises-per-day">How many exercises per day?</label>
-                    <input type="number" id="exercises-per-day" name="exercises-per-day" min="1" max="10">
+                    <label for="hours-per-day">How many hours per day?</label>
+                    <input type="number" id="hours-per-day" name="hours-per-day" min="1" max="10" required>
                 </div>
 
                 <!-- Muscle Groups -->
                 <div class="form-group">
                     <label for="muscle-groups">Select the muscle groups you want to work on:</label>
-                    <select id="muscle-groups" name="muscle-groups" multiple>
-                        <option value="arms">Arms</option>
-                        <option value="legs">Legs</option>
-                        <option value="chest">Chest</option>
-                        <option value="back">Back</option>
-                        <option value="shoulders">Shoulders</option>
-                        <option value="core">Core</option>
-                    </select>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="muscle-groups" value="arms"> Arms</label>
+                        <label><input type="checkbox" name="muscle-groups" value="legs"> Legs</label>
+                        <label><input type="checkbox" name="muscle-groups" value="chest"> Chest</label>
+                        <label><input type="checkbox" name="muscle-groups" value="back"> Back</label>
+                        <label><input type="checkbox" name="muscle-groups" value="shoulders"> Shoulders</label>
+                        <label><input type="checkbox" name="muscle-groups" value="core"> Core</label>
+                        <label><input type="checkbox" name="muscle-groups" value="full-body"> Full Body</label>
+                    </div>
                 </div>
+
 
                 <!-- Type of Training -->
                 <div class="form-group">
@@ -81,6 +103,80 @@
         </section>
 
     </div>
+    
+     <!-- Calendar Section -->
+     <section id="calendar">
+        <h1>Workout Calendar</h1>
+        <div class="calendar">
+            <div class="calendar-header">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar-week">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="calendar-week">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="calendar-week">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="calendar-week">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="calendar-week">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="calendar-week">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Save Workout button -->
+    <button class="save-btn" type="button">Save Workout</button>
+    </section>
+</div>
 
 </body>
 </html>
