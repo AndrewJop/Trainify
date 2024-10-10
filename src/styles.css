@@ -2,18 +2,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e1f5fe; /* Light blue background */
+    background-color: #000000; /* Black background */
 }
 
 /* Navbar styling */
 .navbar {
-    background-color: #1e88e5; /* Blue */
+    background-color: #333333; /* Dark grey */
     padding: 15px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
 .navbar ul {
@@ -29,7 +29,7 @@ body {
 }
 
 .navbar ul li a {
-    color: white;
+    color: #0F0; /* Bright green */
     text-decoration: none;
     padding: 14px 20px;
     display: block;
@@ -37,7 +37,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    background-color: #1976d2; /* Darker blue on hover */
+    background-color: #555555; /* Darker grey on hover */
     border-radius: 5px;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 h1 {
-    color: #0277bd; /* Darker blue for headings */
+    color: #0F0; /* Bright green for headings */
     text-align: center;
 }
 
@@ -66,23 +66,23 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
-    color: white;
+    color: #0F0; /* Bright green */
     font-weight: bold;
     text-align: center;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b); /* Fancy gradient */
+    background: linear-gradient(90deg, #0F0, #0F0); /* Green gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 /* Styling the "AI" part of TrAInify */
 .ai-highlight {
-    color: #ffde59;
+    color: #0F0; /* Bright green */
     font-size: 34px;
     font-family: 'Courier New', Courier, monospace; /* Different font */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient for AI */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    background: linear-gradient(90deg, #0F0, #0F0); /* Green */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -100,9 +100,9 @@ h1 {
     grid-template-columns: 1fr; /* Center the form */
     gap: 20px; /* Space between form fields */
     padding: 20px;
-    background-color: #ffffff; /* White background for form */
+    background-color: #444444; /* Dark grey for form */
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
     margin-left: 20px; /* Add margin to the left */
     width: calc(100% - 40px); /* Adjust width to fit the container */
 }
@@ -116,7 +116,7 @@ h1 {
 .form-group label {
     font-size: 16px;
     margin-bottom: 8px;
-    color: #1e88e5; /* Blue for labels */
+    color: #0F0; /* Bright green for labels */
 }
 
 /* Checkbox group styling */
@@ -125,17 +125,17 @@ h1 {
     flex-direction: column;
     gap: 10px; /* Space between checkboxes */
     padding: 15px; /* Padding inside the box */
-    background-color: #f9f9f9; /* Slightly off-white background for the box */
+    background-color: #555555; /* Grey background for the box */
     border-radius: 5px; /* Rounded corners */
     border: 1px solid #bdbdbd; /* Light gray border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for consistency */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Light shadow for consistency */
 }
 
 .checkbox-group label {
     display: flex;
     align-items: center; /* Center checkbox with label */
     font-size: 16px;
-    color: #00796b; /* Teal for checkbox labels */
+    color: #0F0; /* Bright green for checkbox labels */
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -149,8 +149,9 @@ h1 {
     font-size: 16px;
     border: 1px solid #bdbdbd; /* Light gray */
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9; /* Slightly off-white for inputs */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    background-color: #444444; /* Dark grey for inputs */
+    color: #0F0; /* Bright green text */
     transition: border-color 0.3s ease;
 }
 
@@ -160,7 +161,7 @@ h1 {
 
 .form-group select:focus,
 .form-group input:focus {
-    border-color: #1e88e5; /* Blue border on focus */
+    border-color: #0F0; /* Bright green border on focus */
 }
 
 /* Button styling */
@@ -177,7 +178,7 @@ h1 {
 }
 
 .form-group button.generate-btn:hover {
-    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Apply gradient on hover */
+    background: linear-gradient(90deg, #0F0, #0F0); /* Green gradient on hover */
 }
 
 /* Responsive design for mobile */
@@ -196,9 +197,9 @@ h1 {
 }
 
 .calendar {
-    background-color: #ffffff; /* White background for calendar */
+    background-color: #444444; /* Dark grey for calendar */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Shadow for depth */
     padding: 20px; /* Padding inside the calendar */
 }
 
@@ -206,25 +207,25 @@ h1 {
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
     font-weight: bold;
-    color: #1e88e5; /* Blue color for header */
+    color: #0F0; /* Bright green for header */
     margin-bottom: 10px; /* Space below header */
     text-align: center; /* Center text horizontally */
     align-items: center; /* Center text vertically */
     padding: 10px 0; /* Add some padding for spacing */
 }
 
-
 .calendar-week {
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 7 columns for week */
-    border-top: 1px solid #e0e0e0; /* Light gray border between weeks */
+    border-top: 1px solid #555555; /* Dark grey border between weeks */
 }
 
 .calendar-week div {
     height: 60px; /* Fixed height for each day cell */
-    border-right: 1px solid #e0e0e0; /* Light gray border for separation */
+    border-right: 1px solid #555555; /* Dark grey border for separation */
     text-align: center; /* Center text */
     padding-top: 15px; /* Space above the text */
+    color: #0F0; /* Bright green text */
 }
 
 .calendar-week div:last-child {
@@ -260,22 +261,3 @@ h1 {
         margin-top: 20px; /* Add some space above calendar */
     }
 }
-
-.save-btn {
-    padding: 12px 20px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #4caf50; /* Green color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    display: block;
-    margin: 20px auto 0; /* Center the button and add space on top */
-}
-
-.save-btn:hover {
-    background-color: #388e3c; /* Darker green on hover */
-}
-
