@@ -3,49 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Workout Planner</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Trainify | AI Workout Planner</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li> <!-- Home link -->
-            <li><a href="planner.html">Planner</a></li>
-            <li><a href="nutrition.html">Nutrition</a></li>
-        </ul>
-        <div class="title">
-            Tr<span class="ai-highlight">AI</span>nify
-        </div>
-    </nav>
-
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li> <!-- Home link -->
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+    </ul>
+    <div class="title">
+        Tr<span class="ai-highlight">AI</span>nify
+    </div>
+</nav>
 
     <!-- Main Content -->
     <div class="content">
 
-        <!-- Banner Image with Button -->
-        <div class="banner-image">
-            <img src="C:\Users\Noah Greski\Desktop\Trainify\assets\alexander-redl-d3bYmnZ0ank-unsplash.jpg" alt="Fitness Banner"/>
-            <button class="get-started-btn">Get Started</button>
-        </div>
-
-        <!-- Section for Saved Workouts -->
-        <section id="saved-workouts">
-            <!-- Placeholder for saved workouts -->
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <h1>Unlock Your Best Self with AI</h1>
+                    <p>Customized workout plans and nutrition guidance tailored just for you.</p>
+                    <a href="planner.html" class="get-started-btn">Get Started</a>
+                </div>
+            </div>
+            <img src="assets/fitness-banner.jpg" alt="Fitness Banner" class="hero-image">
         </section>
 
-        <!-- Section for Nutrition -->
-        <section id="nutrition">
-            <!-- Placeholder for nutrition info -->
+        <!-- Features Section -->
+        <section class="features container">
+            <div class="feature">
+                <i class="fas fa-dumbbell"></i>
+                <h2>AI-Powered Workouts</h2>
+                <p>Train smarter, not harder with personalized plans that adapt to your progress.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-utensils"></i>
+                <h2>Nutrition Tracking</h2>
+                <p>Balance your meals with guided recommendations for optimized results.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-calendar-alt"></i>
+                <h2>Progress Monitoring</h2>
+                <p>Stay on track with integrated calendars and workout logs.</p>
+            </div>
         </section>
 
-        <!-- Section for Calendar -->
-        <section id="calendar">
-            <div id="calendar-container"></div>
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>Success Stories</h2>
+            <div class="testimonial">
+                <p>"Trainify changed the game for me. I’ve never felt stronger!"</p>
+                <cite>- Alex R.</cite>
+            </div>
+            <div class="testimonial">
+                <p>"I love how easy it is to stay on top of both workouts and nutrition."</p>
+                <cite>- Jordan S.</cite>
+            </div>
         </section>
 
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trainify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

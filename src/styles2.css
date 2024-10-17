@@ -1,0 +1,350 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Black background */
+    color: #0F0; /* Bright green text */
+}
+
+a {
+    text-decoration: none;
+    color: #0F0; /* Bright green for links */
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for page content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333333; /* Dark grey */
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #0F0; /* Bright green */
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #555555; /* Darker grey on hover */
+    border-radius: 5px;
+}
+
+
+/* Main content styling */
+.content {
+    margin-top: 70px; /* Space for the fixed navbar */
+    padding: 20px;
+}
+
+/* Center title styling */
+.navbar .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #0F0; /* Bright green */
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, #0F0, #0F0); /* Green gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Styling the "AI" part of TrAInify */
+.ai-highlight {
+    color: #0F0; /* Bright green */
+    font-size: 34px;
+    font-family: 'Courier New', Courier, monospace; /* Different font */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    background: linear-gradient(90deg, #0F0, #0F0); /* Green */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Adjust navbar to make space for the centered title */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    background-color: #000000; /* Black background */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0F0; /* Bright green text */
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #0F0; /* Bright green heading */
+}
+
+.hero-text p {
+    margin: 1rem 0;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    color: #0F0; /* Bright green paragraph */
+}
+
+.get-started-btn {
+    background-color: #f44336; /* Red color for button */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin-top: 100px; /* Added spacing */
+}
+
+.get-started-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+    background-color: #000000; /* Very dark grey for features section */
+    text-align: center;
+}
+
+.feature {
+    width: 30%;
+    background-color: #222222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Add shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #f44336; /* Red color for feature icons */
+    margin-bottom: 1rem;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0F0; /* Bright green headings */
+}
+
+.feature p {
+    color: #b3b3b3; /* Light grey text */
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #222222; /* Dark grey for testimonials */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0F0; /* Bright green heading */
+}
+
+.testimonial {
+    margin: 0 auto;
+    width: 70%;
+    background-color: #333333; /* Dark grey for testimonial box */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Light shadow */
+    margin-bottom: 1.5rem;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #FFFFFF; /* White text for testimonials */
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 1rem;
+    color: #b3b3b3; /* Light grey for citation */
+    font-style: italic;
+}
+
+/* Calendar Section Styling */
+#calendar {
+    flex: 1;
+    margin-left: 20px; /* Space between planner and calendar */
+    margin-bottom: 100px;
+}
+
+.calendar {
+    background-color: #444444; /* Dark grey for calendar */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+    padding: 20px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    font-weight: bold;
+    color: #0F0; /* Bright green for header */
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.calendar-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for week */
+    border-top: 1px solid #555555;
+}
+
+.calendar-week div {
+    height: 60px;
+    border-right: 1px solid #555555;
+    text-align: center;
+    padding-top: 15px;
+    color: #0F0; /* Bright green text */
+}
+
+.calendar-week div:last-child {
+    border-right: none;
+}
+
+/* Save Workout Button */
+.save-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4caf50; /* Green color for save button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 20px auto 0; /* Center the button and add space on top */
+}
+
+.save-btn:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Planner form styling */
+.planner-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #444444;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    margin-left: 20px;
+    width: calc(100% - 40px);
+}
+
+/* Individual form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #0F0; /* Bright green for labels */
+}
+
+.form-group select,
+.form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    background-color: #444444;
+    color: #0F0;
+    transition: border-color 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #0F0; /* Bright green border on focus */
+}
+
+/* Button styling */
+.form-group button.generate-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #f44336; /* Red color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.form-group button.generate-btn:hover {
+    background: linear-gradient(90deg, #0F0, #f44336); /* Gradient hover effect */
+}
+
