@@ -31,7 +31,7 @@ h1, h2, h3, p {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; /* Ensure navbar stays on top */
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
@@ -59,7 +59,6 @@ h1, h2, h3, p {
     background-color: #555555; /* Darker grey on hover */
     border-radius: 5px;
 }
-
 
 /* Main content styling */
 .content {
@@ -106,13 +105,19 @@ h1, h2, h3, p {
     position: relative;
     height: 80vh;
     background-color: #000000; /* Black background */
+    overflow: hidden; /* Ensure no content overflow */
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.5);
+    filter: brightness(0.5); /* Darken the image */
+     /* Ensure the image stays behind the overlay */
+    position: absolute; /* Absolute positioning to stay behind */
+    top: 0;
+    left: 0;
+    align-items:center;
 }
 
 .hero-overlay {
@@ -122,10 +127,13 @@ h1, h2, h3, p {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center; /* Align text to the top */
+    align-items: center; /* Center horizontally */
+    flex-direction: column;
     color: #0F0; /* Bright green text */
     text-align: center;
+    padding-top: 50px; /* Add some padding to move text slightly down from the top */
+    z-index: 10; /* Ensure text and button are above the image */
 }
 
 .hero-text h1 {
@@ -135,24 +143,23 @@ h1, h2, h3, p {
 
 .hero-text p {
     margin: 1rem 0;
-    margin-bottom: 50px;
     font-size: 1.2rem;
     color: #0F0; /* Bright green paragraph */
+    padding:2rem;
 }
 
 .get-started-btn {
-    background-color: #f44336; /* Red color for button */
     color: white;
     padding: 1rem 2rem;
     border-radius: 5px;
     font-size: 1.1rem;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
-    margin-top: 100px; /* Added spacing */
+
 }
 
 .get-started-btn:hover {
-    background-color: #c0392b; /* Darker red on hover */
+    background-color: #0f0; 
 }
 
 /* Features Section */
@@ -162,6 +169,7 @@ h1, h2, h3, p {
     padding: 3rem 0;
     background-color: #000000; /* Very dark grey for features section */
     text-align: center;
+    gap: 3rem; /* Add spacing between features */
 }
 
 .feature {
@@ -208,7 +216,7 @@ h1, h2, h3, p {
 
 .testimonial {
     margin: 0 auto;
-    width: 70%;
+    width: 40rem;
     background-color: #333333; /* Dark grey for testimonial box */
     padding: 1.5rem;
     border-radius: 10px;
@@ -347,4 +355,3 @@ h1, h2, h3, p {
 .form-group button.generate-btn:hover {
     background: linear-gradient(90deg, #0F0, #f44336); /* Gradient hover effect */
 }
-
