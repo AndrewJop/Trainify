@@ -15,6 +15,7 @@ a {
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Container for page content */
@@ -22,6 +23,7 @@ h1, h2, h3, p {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: center;
 }
 
 /* Navbar styling */
