@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Planner</title>
+    <link rel="icon" href="../assets/dumbellIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,161 +21,158 @@
     </div>
 </nav>
 
+<!-- Main Content -->
+<div class="content">
 
-    <!-- Main Content -->
-    <div class="content">
+    <!-- Planner Section -->
+    <section id="planner">
+        <h1>AI Workout Planner</h1>
 
-        <!-- Planner Section -->
-        <section id="planner">
-            <h1>AI Workout Planner</h1>
-
-            <form class="planner-form">
-                <!-- Age -->
-                <div class="form-group">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" min="1" max="120" required>
-                </div>
-
-                <!-- Height -->
-                <div class="form-group">
-                    <label for="height">Height (in):</label>
-                    <input type="number" id="height" name="height" min="50" max="300" required>
-                </div>
-
-                <!-- Weight -->
-                <div class="form-group">
-                    <label for="weight">Weight (lbs):</label>
-                    <input type="number" id="weight" name="weight" min="20" max="500" required>
-                </div>
-
-                <!-- Days per Week -->
-                <div class="form-group">
-                    <label for="days-per-week">How many days per week do you want to work out?</label>
-                    <select id="days-per-week" name="days-per-week">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                    </select>
-                </div>
-
-                <!-- Hours per Day -->
-                <div class="form-group">
-                    <label for="hours-per-day">How many hours per day?</label>
-                    <input type="number" id="hours-per-day" name="hours-per-day" min="1" max="10" required>
-                </div>
-
-                <!-- Muscle Groups -->
-                <div class="form-group">
-                    <label for="muscle-groups">Select the muscle groups you want to work on:</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="muscle-groups" value="arms"> Arms</label>
-                        <label><input type="checkbox" name="muscle-groups" value="legs"> Legs</label>
-                        <label><input type="checkbox" name="muscle-groups" value="chest"> Chest</label>
-                        <label><input type="checkbox" name="muscle-groups" value="back"> Back</label>
-                        <label><input type="checkbox" name="muscle-groups" value="shoulders"> Shoulders</label>
-                        <label><input type="checkbox" name="muscle-groups" value="core"> Core</label>
-                        <label><input type="checkbox" name="muscle-groups" value="full-body"> Full Body</label>
-                    </div>
-                </div>
-
-
-                <!-- Type of Training -->
-                <div class="form-group">
-                    <label for="training-type">What type of training are you looking for?</label>
-                    <select id="training-type" name="training-type">
-                        <option value="strength">Strength Training</option>
-                        <option value="muscle">Gain Muscle</option>
-                        <option value="weight-loss">Lose Weight</option>
-                        <option value="endurance">Endurance Training</option>
-                    </select>
-                </div>
-
-                <!-- Generate Button -->
-                <div class="form-group">
-                    <button type="button" class="generate-btn">Generate Plan</button>
-                </div>
-            </form>
-        </section>
-
-    </div>
-    
-     <!-- Calendar Section -->
-     <section id="calendar">
-        <h1>Workout Calendar</h1>
-        <div class="calendar">
-            <div class="calendar-header">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
+        <form class="planner-form" id="workout-form">
+            <!-- Age -->
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="120" required>
             </div>
-            <div class="calendar-week">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="calendar-week">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="calendar-week">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="calendar-week">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="calendar-week">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="calendar-week">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
 
-        <!-- Save Workout button -->
-    <button class="save-btn" type="button">Download Workout</button>
+            <!-- Height -->
+            <div class="form-group">
+                <label for="height">Height (in):</label>
+                <input type="number" id="height" name="height" min="50" max="300" required>
+            </div>
+
+            <!-- Weight -->
+            <div class="form-group">
+                <label for="weight">Weight (lbs):</label>
+                <input type="number" id="weight" name="weight" min="20" max="500" required>
+            </div>
+
+            <!-- Days per Week -->
+            <div class="form-group">
+                <label for="days-per-week">How many days per week do you want to work out?</label>
+                <select id="days-per-week" name="days-per-week">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+
+            <!-- Hours per Day -->
+            <div class="form-group">
+                <label for="hours-per-day">How many hours per day?</label>
+                <input type="number" id="hours-per-day" name="hours-per-day" min="1" max="10" required>
+            </div>
+
+            <!-- Muscle Groups -->
+            <div class="form-group">
+                <label for="muscle-groups">Select the muscle groups you want to work on:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="muscle-groups[]" value="arms"> Arms</label>
+                    <label><input type="checkbox" name="muscle-groups[]" value="legs"> Legs</label>
+                    <label><input type="checkbox" name="muscle-groups[]" value="chest"> Chest</label>
+                    <label><input type="checkbox" name="muscle-groups[]" value="back"> Back</label>
+                    <label><input type="checkbox" name="muscle-groups[]" value="shoulders"> Shoulders</label>
+                    <label><input type="checkbox" name="muscle-groups[]" value="core"> Core</label>
+                    <label><input type="checkbox" name="muscle-groups[]" value="full-body"> Full Body</label>
+                </div>
+            </div>
+
+            <!-- Type of Training -->
+            <div class="form-group">
+                <label for="training-type">What type of training are you looking for?</label>
+                <select id="training-type" name="training-type">
+                    <option value="strength">Strength Training</option>
+                    <option value="muscle">Gain Muscle</option>
+                    <option value="weight-loss">Lose Weight</option>
+                    <option value="endurance">Endurance Training</option>
+                </select>
+            </div>
+
+            <!-- Generate Button -->
+            <div class="form-group">
+                <button type="button" class="generate-btn">Generate Plan</button>
+            </div>
+        </form>
     </section>
+
 </div>
+<div class="response"></div>
+<!-- Calendar Section -->
+<section id="calendar">
+    <h1>Workout Calendar</h1>
+    <div class="calendar">
+        <div class="calendar-header">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <div class="calendar-week">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="calendar-week">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="calendar-week">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="calendar-week">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="calendar-week">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="calendar-week">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Save Workout button -->
+    <button class="save-btn" type="button">Download Workout</button>
+</section>
 
 <script src="script.js"></script>
 </body>
