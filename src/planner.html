@@ -100,76 +100,40 @@
     </section>
 
 </div>
-<div class="response"></div>
-<!-- Calendar Section -->
-<section id="calendar">
-    <h1>Workout Calendar</h1>
-    <div class="calendar">
-        <div class="calendar-header">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-        </div>
-        <div class="calendar-week">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="calendar-week">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="calendar-week">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="calendar-week">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="calendar-week">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="calendar-week">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+<div class="response">
+    <h1>View Your Google Calendar</h1>
+
+    <form id="calendar-form">
+        <input type="text" id="calendar-id" placeholder="your-email@gmail.com">
+        <button type="submit">Load Calendar</button>
+    </form>
+
+    <div id="calendar-container">
+        <!-- Calendar iframe will be dynamically inserted here -->
     </div>
 
+    <script>
+        // Handle form submission
+        document.getElementById('calendar-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const calendarId = document.getElementById('calendar-id').value;
+
+            // Validate the input to ensure it's not empty
+            if (calendarId.trim() === '') {
+                alert('Please enter a valid Calendar ID');
+                return;
+            }
+
+            // Create the calendar iframe with the user's Calendar ID
+            const iframeSrc = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&ctz=America/New_York`;
+
+            // Set the iframe into the div
+            document.getElementById('calendar-container').innerHTML = `
+                <iframe src="${iframeSrc}" style="border: 0" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+            `;
+        });
+    </script>
+</div>
     <!-- Save Workout button -->
     <button class="save-btn" type="button">Download Workout</button>
 </section>
